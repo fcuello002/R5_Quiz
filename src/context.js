@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 const table = {
   sports: 21,
@@ -9,14 +9,9 @@ const table = {
 
 const API_ENDPOINT = "https://opentdb.com/api.php?";
 
-const url = "";
-
-const tempUrl =
-  "https://opentdb.com/api.php?amount=20&category=24&difficulty=medium&type=multiple";
-
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
+const AppProvider = (props) => {
   const [waiting, setWaiting] = useState(true);
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
@@ -110,7 +105,7 @@ const AppProvider = ({ children }) => {
         handleSubmit,
       }}
     >
-      {children}
+      {props.children}
     </AppContext.Provider>
   );
 };

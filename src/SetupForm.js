@@ -8,7 +8,6 @@ const SetupForm = () => {
       <section className="quiz quiz-small">
         <form className="setup-form">
           <h2>Welcome to Frank's Quiz!</h2>
-          {/* amount */}
           <div className="form-control">
             <label htmlFor="amount">number of questions</label>
             <input
@@ -22,7 +21,6 @@ const SetupForm = () => {
               max={100}
             />
           </div>
-          {/* category */}
           <div className="form-control">
             <label htmlFor="category">select category</label>
             <select
@@ -36,7 +34,6 @@ const SetupForm = () => {
               <option value="sports">sports</option>
             </select>
           </div>
-          {/* difficulty */}
           <div className="form-control">
             <label htmlFor="difficulty">select difficulty</label>
             <select

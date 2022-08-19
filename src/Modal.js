@@ -18,7 +18,7 @@ const Modal = () => {
       return <p>You got an F! You failed!</p>;
     }
   };
-  
+
   return (
     <div
       className={`${
